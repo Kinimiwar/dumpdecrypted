@@ -22,6 +22,7 @@ dumpdecrypted.dylib: replacing existing signature
 
 ```
 
+```
 iPod:~ root# DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan
 mach-o decryption dumper
 
@@ -41,3 +42,4 @@ DISCLAIMER: This tool is only meant for security research purposes, not for appl
 [+] Copying the not encrypted remainder of the file
 [+] Closing original file
 [+] Closing dump file
+```
