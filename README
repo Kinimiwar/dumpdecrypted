@@ -8,8 +8,19 @@ First adjust the Makefile if you have a different iOS SDK installed.
 
 And then just: make
 
-
 Usage:
+
+Before running the decryption dumper, the dumpdecrypted.dylib should be signed.
+
+```
+$ security find-identity -p codesigning -v
+  1) 998971859D4D2E74F "iPhone Developer: ..."
+  2) CF57726A2BA2D8B57 "Mac Developer: ..."
+       2 valid identities found
+$ codesign -f -s 998971859D4D2E74F... dumpdecrypted.dylib
+dumpdecrypted.dylib: replacing existing signature
+
+```
 
 iPod:~ root# DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan
 mach-o decryption dumper
