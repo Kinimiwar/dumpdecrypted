@@ -24,10 +24,11 @@ dumpdecrypted.dylib: replacing existing signature
 
 ```
 iPod:~ root# DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan
-mach-o decryption dumper
+
 
 DISCLAIMER: This tool is only meant for security research purposes, not for application crackers.
 
+[+] Mach-O Decryption Dumper by Stefanesser
 [+] Found encrypted data at address 00002000 of length 1826816 bytes - type 1.
 [+] Opening /private/var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan for reading.
 [+] Reading header
