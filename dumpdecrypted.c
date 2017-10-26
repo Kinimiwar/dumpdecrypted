@@ -4,10 +4,11 @@ Dumps decrypted iPhone Applications to a file - better solution than those GDB s
 (C) Copyright 2011-2014 Stefan Esser
 
 iPod:~ root# DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan
-mach-o decryption dumper
+
 
 DISCLAIMER: This tool is only meant for security research purposes, not for application crackers.
 
+[+] Mach-O Decryption Dumper by Stefanesser
 [+] Found encrypted data at address 00002000 of length 1826816 bytes - type 1.
 [+] Opening /private/var/mobile/Applications/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Scan.app/Scan for reading.
 [+] Reading header
@@ -55,10 +56,9 @@ void dumptofile(int argc, const char **argv, const char **envp, const char **app
 	unsigned int fileoffs = 0, off_cryptid = 0, restsize;
 	int i,fd,outfd,r,n,toread;
 	char *tmp;
-	
-	printf("mach-o decryption dumper\n\n");
 		
 	printf("DISCLAIMER: This tool is only meant for security research purposes, not for application crackers.\n\n");
+	printf("[+] Mach-O Decryption Dumper by Stefanesser \n");
 	
 	/* detect if this is a arm64 binary */
 	if (pvars->mh->magic == MH_MAGIC_64) {
